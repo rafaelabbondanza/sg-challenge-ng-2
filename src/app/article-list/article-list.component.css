@@ -1,0 +1,11 @@
+.hn-news-list {
+  margin: 0;
+}
+
+.hn-news-list > li {
+  margin-bottom: 5px;
+}
+
+.hn-news-info {
+  margin-top: 3px;
+}

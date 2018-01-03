@@ -1,0 +1,12 @@
+<div class="hn-app-root">
+  <header class="hn-app-header">
+      <a class="hn-app-title" routerLink="/">News Clone</a>
+      <span *ngFor="let _menuItem_ of menuItems; let _i_ = index">
+        <span *ngIf="_i_ > 0">|</span>
+        <a routerLink="{{ _menuItem_.link }}">{{ _menuItem_.title }}</a>
+      </span>
+  </header>
+  <section class="hn-app-body">
+      <router-outlet></router-outlet>
+  </section>
+</div>

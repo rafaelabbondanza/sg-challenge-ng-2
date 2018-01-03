@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 10pt;
+  color: #333;
+}
+
+.hn-subtext {
+  font-size: 7pt;
+  color: #828282;
+}
+
+.hn-aside-text {
+  font-size: 8pt;
+  color: #828282;
+}
+
+pre {
+  border-radius: 5px;
+  background-color: #EEE;
+  opacity: .8;
+  padding: 10px;
+}

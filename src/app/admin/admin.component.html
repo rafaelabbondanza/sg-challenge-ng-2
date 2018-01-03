@@ -1,0 +1,33 @@
+<div class="hn-admin">
+    <h3>New Article</h3>
+    <div>
+        <label>Title</label>
+        <input type="text" name="title" [(ngModel)]="newArticle.Title">
+    </div>
+
+    <div>
+        <label>Url</label>
+        <input type="text" name="url" [(ngModel)]="newArticle.Url">
+    </div>
+
+    <button
+      (click)="generatePixel(newArticle)"
+      [disabled]="!newArticle.Url || !newArticle.Title">
+      Generate Pixel
+    </button>
+
+    <div class="hn-admin-pixel" *ngIf="createdArticle">
+        <h4>New Pixel:</h4>
+        <div> {{ createdArticle.Title }} ({{ createdArticle.Url }})</div>
+        <pre> {{ getTag(createdArticle.Pixel) }} </pre>
+    </div>
+    <div class="hn-admin-pixel" *ngIf="articles && articles.length > 0">
+        <hr>
+        <h4>Existing Pixels ({{articles.length}}):</h4>
+        <div *ngFor="let _article_ of articles">
+            <div> {{ _article_.Title }} ({{ _article_.Url }})</div>
+            <pre> {{ getTag(_article_.Pixel) }} </pre>
+        </div>
+    </div>
+
+</div>

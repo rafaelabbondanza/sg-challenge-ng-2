@@ -1,0 +1,12 @@
+<ol class="hn-news-list">
+  <li *ngFor="let _article_ of articles">
+    <div class="hn-news-article">
+        <div class="hn-news-title">
+            {{ _article_.Title }} <a class="hn-aside-text" href="{{ _article_.Url }}" target="_blank">({{ _article_.Url }})</a>
+        </div>
+        <div class="hn-news-info hn-subtext">
+            {{ _article_.Pixel ? _article_.Pixel.Views : 0 }} "points" by {{ _article_.User.Username }}
+        </div>
+    </div>
+  </li>
+</ol>
